@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Auto resize textfield</h2>
+        <textarea placeholder="Type something..." required></textarea>
+    </div>
+    <script>
+        const textarea =document.querySelector("textarea");
+        textarea.addEventListener("keyup",e=>{
+            textarea.style.height="auto";
+            let s=e.target.scrollHeight;
+            textarea.style.height=`${s}px`
+        })
+    </script>
+</body>
+</html>
